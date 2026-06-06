@@ -34,6 +34,11 @@ const config = defineConfig(({ mode }) => {
         ),
       },
     },
+    build: {
+      rollupOptions: {
+        external: ["cloudflare:workers"],
+      },
+    },
     plugins: [
       paraglideVitePlugin({
         project: "./project.inlang",
